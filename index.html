@@ -1,23 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Nordic Art Archive</title>
-   <link rel="stylesheet" href="./styles/style.css" />
-    <script type="module" src="js/main.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nordic Art Archive</title>
+  <meta
+    name="description"
+    content="Browse Nordic artworks, view details, and manage your own artwork entries."
+  />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <script type="module" src="./js/main.js" defer></script>
 </head>
 <body data-page="feed">
-    <header class="site-header">
-        <nav class="container flex-between" style="padding:0">
-            <a href="/index.html" class="logo">Nordic Art</a>
-            <div id="auth-links" class="flex-gap"></div>
-        </nav>
-    </header>
-    
-    <main class="container">
-        <h1>Archive</h1>
-        <div id="error-msg" class="alert-error hidden"></div>
-        <div id="loader" class="loader">Loading...</div>
-        <div id="grid" class="grid-auto"></div>
-    </main>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand" aria-label="Nordic Art Archive home">
+        <span class="brand-mark">N</span>
+        <span class="brand-text">
+          <strong>Nordic Art Archive</strong>
+          <small>Showcasing Nordic Excellence</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <span id="welcome-user" class="welcome-user"></span>
+        <nav id="auth-links" class="nav-links" aria-label="Main navigation"></nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero container">
+      <h1 class="hero-title">Discover Nordic Artworks</h1>
+      <p class="hero-copy">
+        Explore contemporary and traditional artworks by talented Nordic artists.
+        A curated collection showcasing the beauty and diversity of Nordic creativity.
+      </p>
+
+      <div class="hero-stats" aria-label="Site highlights">
+        <div class="stat-card">
+          <span id="artwork-count" class="stat-value">12</span>
+          <span class="stat-label">Artworks</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">∞</span>
+          <span class="stat-label">Inspiration</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">5★</span>
+          <span class="stat-label">Quality</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container feed-section">
+      <div class="section-top">
+        <h2 class="section-title">Showing <span id="feed-count">0</span> artworks</h2>
+      </div>
+
+      <div id="message" class="alert hidden" aria-live="polite"></div>
+      <div id="loader" class="loader">Loading artworks...</div>
+      <div id="grid" class="art-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Nordic Art Archive. Created by Snezana Kragujevac</p>
+    </div>
+  </footer>
 </body>
 </html>
