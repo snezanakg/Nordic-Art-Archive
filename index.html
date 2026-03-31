@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nordic Art Archive</title>
+   <link rel="stylesheet" href="./styles/style.css" />
+    <script type="module" src="js/main.js" defer></script>
+</head>
+<body data-page="feed">
+    <header class="site-header">
+        <nav class="container flex-between" style="padding:0">
+            <a href="/index.html" class="logo">Nordic Art</a>
+            <div id="auth-links" class="flex-gap"></div>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <h1>Archive</h1>
+        <div id="error-msg" class="alert-error hidden"></div>
+        <div id="loader" class="loader">Loading...</div>
+        <div id="grid" class="grid-auto"></div>
+    </main>
+</body>
+</html>

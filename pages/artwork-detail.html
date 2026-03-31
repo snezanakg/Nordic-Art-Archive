@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artwork Detail | Nordic Art Archive</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <script type="module" src="../js/main.js" defer></script>
+</head>
+<body data-page="details">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand" aria-label="Nordic Art Archive home">
+        <span class="brand-mark">N</span>
+        <span class="brand-text">
+          <strong>Nordic Art Archive</strong>
+          <small>Showcasing Nordic Excellence</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <span id="welcome-user" class="welcome-user"></span>
+        <nav id="auth-links" class="nav-links" aria-label="Main navigation"></nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="container detail-section">
+      <a href="../index.html" class="back-link">← Back to artworks</a>
+
+      <div id="message" class="alert hidden" aria-live="polite"></div>
+      <div id="loader" class="loader">Loading artwork...</div>
+
+      <div id="main-content" class="detail-grid hidden">
+        <div class="detail-image-card">
+          <img id="art-img" src="" alt="" class="detail-image" />
+        </div>
+
+        <article class="detail-info-card">
+          <h1 id="art-title" class="detail-title"></h1>
+          <p id="art-artist" class="detail-artist"></p>
+
+          <div class="detail-meta">
+            <div class="meta-block">
+              <span class="meta-label">Year</span>
+              <span id="art-year" class="meta-value"></span>
+            </div>
+
+            <div class="meta-block">
+              <span class="meta-label">Medium</span>
+              <span id="art-medium" class="meta-value"></span>
+            </div>
+
+            <div class="meta-block">
+              <span class="meta-label">Location</span>
+              <span id="art-location" class="meta-value"></span>
+            </div>
+          </div>
+
+          <section class="detail-copy">
+            <h2>About this artwork</h2>
+            <p id="art-desc"></p>
+          </section>
+
+          <div id="admin-actions" class="admin-actions hidden">
+            <a id="edit-link" href="#" class="btn btn-primary">Edit Artwork</a>
+            <button id="delete-btn" type="button" class="btn btn-danger">Delete</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Nordic Art Archive. Created by Snezana Kragujevac</p>
+    </div>
+  </footer>
+</body>
+</html>

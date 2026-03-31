@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Artwork | Nordic Art Archive</title>
+ <link rel="stylesheet" href="../styles/style.css" />
+  <script type="module" src="../js/main.js" defer></script>
+</head>
+<body data-page="create">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand" aria-label="Nordic Art Archive home">
+        <span class="brand-mark">N</span>
+        <span class="brand-text">
+          <strong>Nordic Art Archive</strong>
+          <small>Showcasing Nordic Excellence</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <span id="welcome-user" class="welcome-user"></span>
+        <nav id="auth-links" class="nav-links" aria-label="Main navigation"></nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="container form-page">
+      <a href="../index.html" class="back-link">← Back to artworks</a>
+
+      <div class="form-card">
+        <h1 class="form-title">Add New Artwork</h1>
+        <p class="form-subtitle">
+          Share a new artwork with the Nordic Art Archive community.
+        </p>
+
+        <div id="message" class="alert hidden" aria-live="polite"></div>
+
+        <form id="create-form" novalidate>
+          <div class="form-group">
+            <label for="title">Title *</label>
+            <input id="title" name="title" type="text" class="form-input" required />
+            <p class="field-error" data-error-for="title"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="artist">Artist *</label>
+            <input id="artist" name="artist" type="text" class="form-input" required />
+            <p class="field-error" data-error-for="artist"></p>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="year">Year *</label>
+              <input id="year" name="year" type="number" class="form-input" required />
+              <p class="field-error" data-error-for="year"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="medium">Medium *</label>
+              <input id="medium" name="medium" type="text" class="form-input" required />
+              <p class="field-error" data-error-for="medium"></p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location *</label>
+            <input id="location" name="location" type="text" class="form-input" required />
+            <p class="field-error" data-error-for="location"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description *</label>
+            <textarea id="description" name="description" class="form-input form-textarea" required></textarea>
+            <p class="field-error" data-error-for="description"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="imageUrl">Image URL *</label>
+            <input id="imageUrl" name="imageUrl" type="url" class="form-input" required />
+            <p class="field-help">Provide a direct URL to an image of the artwork.</p>
+            <p class="field-error" data-error-for="imageUrl"></p>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Create Artwork</button>
+            <a href="../index.html" class="btn btn-link">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Nordic Art Archive. Created by Snezana Kragujevac</p>
+    </div>
+  </footer>
+</body>
+</html>
